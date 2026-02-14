@@ -1,32 +1,36 @@
 openapi: 3.0.4
 info:
   title: Stars Lookup
-  description: Stars Lookup is a simple tool for looking up star data. It returns the star name, mass, diameter, and more.
+  description: >-
+    Stars Lookup is a simple tool for looking up star data. It returns the star
+    name, mass, diameter, and more.
   termsOfService: https://apiverve.com/terms/
   contact:
     name: APIVerve Support
     email: hello@apiverve.com
     url: https://apiverve.com/contact
-  version: 1.0.9
+  version: 1.0.0
 externalDocs:
   description: Learn more about APIVerve
   url: https://docs.apiverve.com?utm_source=openapi
 servers:
-- url: https://api.apiverve.com/
+  - url: https://api.apiverve.com/
 paths:
   /v1/starslookup:
     get:
       summary: Lookup Star
-      description: Stars Lookup is a simple tool for looking up star data. It returns the star name, mass, diameter, and more.
+      description: Lookup star data based on the star name
       operationId: starslookup
       parameters:
-      - name: name
-        in: query
-        schema:
-          type: string
-        required: true
-        description: The name of the star for which you want to get the data (e.g., Sirius)
-        example: Sirius
+        - name: name
+          in: query
+          schema:
+            type: string
+          required: true
+          description: >-
+            The name of the star for which you want to get the data (e.g.,
+            Sirius)
+          example: Sirius
       responses:
         '200':
           description: Successful Response
@@ -42,14 +46,14 @@ paths:
                     type: string
                     description: error
                   data:
-                    type: string
+                    type: object
                     description: data
               example:
                 status: ok
-                error: 
+                error: null
                 data:
                   starName: Sirius
-                  mass: 4.674385E+30
+                  mass: 4.674385e+30
                   diameter: 2825760
                   galX: -5.895
                   galY: -6.152
@@ -57,13 +61,13 @@ paths:
                   dist: 8.6
                   starType: A1(V)
                   temp: 9500
-                  color: 0xbaccff
+                  color: '0xbaccff'
         '401':
           description: Your request was not authorized, or your API Key was invalid
         '404':
           description: Requested resource was not found
         '500':
-          description: A server error has occured, try again later
+          description: A server error has occurred, try again later
 components:
   securitySchemes:
     api_key:
@@ -71,4 +75,4 @@ components:
       name: x-api-key
       in: header
 security:
-- api_key: []
+  - api_key: []
