@@ -12,7 +12,6 @@ namespace APIVerve.API.StarsLookup
     {
         /// <summary>
         /// The name of the star for which you want to get the data (e.g., Sirius)
-        /// Example: Sirius
         /// </summary>
         [JsonProperty("name")]
         public string Name { get; set; }
