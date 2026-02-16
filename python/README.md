@@ -225,8 +225,9 @@ from apiverve_starslookup.apiClient import StarslookupAPIClient
 
 api = StarslookupAPIClient("[YOUR_API_KEY]")
 
+query = { "name": "Sirius" }
+
 try:
-    query = { "name": "Sirius" }
     result = api.execute(query)
     print(result)
 finally:
