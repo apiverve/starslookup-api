@@ -25,6 +25,9 @@ namespace APIVerve.API.StarsLookup
 
         [JsonProperty("data")]
         public Data Data { get; set; }
+
+        [JsonProperty("premium")]
+        public Premium Premium { get; set; }
     }
 
     public partial class Data
@@ -33,30 +36,42 @@ namespace APIVerve.API.StarsLookup
         public string StarName { get; set; }
 
         [JsonProperty("mass")]
-        public double Mass { get; set; }
+        public double? Mass { get; set; }
 
         [JsonProperty("diameter")]
-        public long Diameter { get; set; }
+        public long? Diameter { get; set; }
 
         [JsonProperty("galX")]
-        public double GalX { get; set; }
+        public double? GalX { get; set; }
 
         [JsonProperty("galY")]
-        public double GalY { get; set; }
+        public double? GalY { get; set; }
 
         [JsonProperty("galZ")]
-        public double GalZ { get; set; }
+        public double? GalZ { get; set; }
 
         [JsonProperty("dist")]
-        public double Dist { get; set; }
+        public double? Dist { get; set; }
 
         [JsonProperty("starType")]
         public string StarType { get; set; }
 
         [JsonProperty("temp")]
-        public long Temp { get; set; }
+        public long? Temp { get; set; }
 
         [JsonProperty("color")]
         public string Color { get; set; }
+    }
+
+    public partial class Premium
+    {
+        [JsonProperty("message")]
+        public string Message { get; set; }
+
+        [JsonProperty("upgrade_url")]
+        public Uri UpgradeUrl { get; set; }
+
+        [JsonProperty("locked_fields")]
+        public string[] LockedFields { get; set; }
     }
 }
