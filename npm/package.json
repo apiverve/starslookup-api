@@ -1,7 +1,7 @@
 {
   "name": "@apiverve/starslookup",
-  "version": "1.2.0",
-  "description": "Stars Lookup is a simple tool for looking up star data. It returns the star name, mass, diameter, and more.",
+  "version": "1.2.2",
+  "description": "Stars Lookup retrieves physical and positional stellar data by star name or astronomical classification. Query individual stars or filter by spectral class to obtain mass in kilograms, distance in light-years, and stellar type.",
   "main": "index.js",
   "types": "index.d.ts",
   "sideEffects": false,
@@ -23,7 +23,7 @@
     "directory": "npm"
   },
   "keywords": [
-    "stars lookup", "stars lookup api", "stars lookup tool", "stars lookup software", "stars lookup service"
+    "star lookup api", "star mass lookup", "stellar classification search", "find star distance", "star coordinates"
   ],
   "author": {
     "name": "APIVerve",
@@ -34,7 +34,7 @@
   "bugs": {
     "url": "https://github.com/apiverve/starslookup-api/issues"
   },
-  "homepage": "https://apiverve.com/marketplace/starslookup?utm_source=npm&utm_medium=homepage",
+  "homepage": "https://apiverve.com/marketplace/starslookup?utm_source=npm&utm_medium=referral&utm_content=homepage",
   "devDependencies": {
     "mocha": "^11.0.1",
     "chai": "^5.1.2",
