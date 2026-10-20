@@ -1,13 +1,13 @@
-# [Stars Lookup API](https://apiverve.com/marketplace/starslookup?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)
+# [Stars Lookup API](https://apiverve.com/marketplace/starslookup?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)
 
-Stars Lookup is a simple tool for looking up star data. It returns the star name, mass, diameter, and more.
+Stars Lookup retrieves physical and positional stellar data by star name or astronomical classification. Query individual stars or filter by spectral class to obtain mass in kilograms, distance in light-years, and stellar type.
 
 The Stars Lookup API provides a simple, reliable way to integrate stars lookup functionality into your applications. Built for developers who need production-ready stars lookup capabilities without the complexity of building from scratch.
 
-**[View API Details →](https://apiverve.com/marketplace/starslookup?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)**
+**[View API Details →](https://apiverve.com/marketplace/starslookup?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)**
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![API Status](https://img.shields.io/badge/Status-Active-green.svg)](https://apiverve.com/marketplace/starslookup?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)
+[![API Status](https://img.shields.io/badge/Status-Active-green.svg)](https://apiverve.com/marketplace/starslookup?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)
 [![Method](https://img.shields.io/badge/Method-GET-blue.svg)](#)
 [![Platform](https://img.shields.io/badge/Platform-Multi--Platform-orange.svg)](#installation)
 
@@ -161,7 +161,7 @@ go get github.com/apiverve/starslookup-api/go
 
 ## Documentation
 
-- 🏠 **API Home:** [Stars Lookup API](https://apiverve.com/marketplace/starslookup?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)
+- 🏠 **API Home:** [Stars Lookup API](https://apiverve.com/marketplace/starslookup?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)
 - 📚 **API Reference:** [docs.apiverve.com/ref/starslookup](https://docs.apiverve.com/ref/starslookup)
 - 📖 **OpenAPI Spec:** [openapi.yaml](./openapi.yaml)
 - 💡 **Examples:** [examples/](./examples/)
@@ -191,11 +191,37 @@ x-api-key: YOUR_API_KEY_HERE
 Get your API key: [https://apiverve.com](https://apiverve.com)
 
 ### Response Format
-All responses are JSON with this structure:
+
+Every APIVerve endpoint returns the same envelope — check `status`, then read `data`:
+
 ```json
 {
   "status": "ok",
+  "error": null,
   "data": { ... }
+}
+```
+
+### Example Response
+
+A real response from the Stars Lookup API:
+
+```json
+{
+  "status": "ok",
+  "error": null,
+  "data": {
+    "starName": "Sirius",
+    "mass": 4.674385e+30,
+    "diameter": 2825760,
+    "galX": -5.895,
+    "galY": -6.152,
+    "galZ": -1.167,
+    "dist": 8.6,
+    "starType": "A1(V)",
+    "temp": 9500,
+    "color": "0xbaccff"
+  }
 }
 ```
 
@@ -203,7 +229,7 @@ All responses are JSON with this structure:
 
 ## Support & Community
 
-- 🏠 **API Home**: [Stars Lookup API](https://apiverve.com/marketplace/starslookup?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)
+- 🏠 **API Home**: [Stars Lookup API](https://apiverve.com/marketplace/starslookup?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)
 - 💬 **Support**: [https://apiverve.com/contact](https://apiverve.com/contact)
 - 🐛 **Issues**: [GitHub Issues](../../issues)
 - 📖 **Documentation**: [https://docs.apiverve.com](https://docs.apiverve.com)

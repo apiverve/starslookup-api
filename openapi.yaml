@@ -2,8 +2,10 @@ openapi: 3.0.4
 info:
   title: Stars Lookup
   description: >-
-    Stars Lookup is a simple tool for looking up star data. It returns the star
-    name, mass, diameter, and more.
+    Stars Lookup retrieves physical and positional stellar data by star name or
+    astronomical classification. Query individual stars or filter by spectral
+    class to obtain mass in kilograms, distance in light-years, and stellar
+    type.
   termsOfService: https://apiverve.com/terms/
   contact:
     name: APIVerve Support
@@ -18,7 +20,7 @@ servers:
 paths:
   /v1/starslookup:
     get:
-      summary: Lookup Star
+      summary: Stars Lookup
       description: Lookup star data based on the star name
       operationId: starslookup
       parameters:
