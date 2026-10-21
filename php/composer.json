@@ -1,0 +1,49 @@
+{
+    "name": "apiverve/starslookup",
+    "description": "Stars Lookup retrieves physical and positional stellar data by star name or astronomical classification. Query individual stars or filter by spectral class to obtain mass in kilograms, distance in light-years, and stellar type.",
+    "version": "1.2.2",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "APIVerve",
+            "email": "hello@apiverve.com",
+            "homepage": "https://apiverve.com"
+        }
+    ],
+    "keywords": [
+        "api",
+        "apiverve",
+        "starslookup",
+        "star lookup api",
+        "star mass lookup",
+        "stellar classification search",
+        "find star distance",
+        "star coordinates"
+    ],
+    "homepage": "https://apiverve.com/marketplace/starslookup?utm_source=php&utm_medium=referral&utm_content=homepage",
+    "support": {
+        "email": "hello@apiverve.com",
+        "docs": "https://docs.apiverve.com/ref/starslookup",
+        "source": "https://github.com/apiverve/starslookup-API/tree/main/php"
+    },
+    "require": {
+        "php": ">=7.4",
+        "guzzlehttp/guzzle": "^7.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "APIVerve\\Starslookup\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "APIVerve\\Starslookup\\Tests\\": "tests/"
+        }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
